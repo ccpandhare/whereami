@@ -29,3 +29,9 @@
     stroke: var(--rectangle);
     --perimeter: calc(2 * 100px + 2 * 15px);
 }
+
+@media screen and (max-width: 750px) {
+    .roundel {
+        --size: 200px;
+    }
+}
