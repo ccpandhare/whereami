@@ -1,0 +1,66 @@
+.roundel-outer-circle, .roundel-inner-circle {
+    --hidden: var(--circumference);
+}
+.roundel-rectangle {
+    --hidden: var(--perimeter);
+}
+.roundel-outer-circle, .roundel-inner-circle, .roundel-rectangle {
+    --shown: 0;
+    stroke-dasharray: var(--hidden);
+    stroke-dashoffset: var(--hidden);
+}
+
+.roundel-inner-circle {
+    animation: animation-inner-circle 1s linear forwards;
+}
+
+.roundel-outer-circle {
+    animation: animation-outer-circle 1.5s linear forwards;
+    animation-delay: 0.5s;
+}
+
+.roundel-rectangle {
+    animation: animation-rectangle 1s linear forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes animation-outer-circle {
+    0% {
+        stroke-dashoffset: var(--hidden);
+        fill: var(--background);
+    }
+    90% {
+        stroke-dashoffset: var(--shown);
+        fill: var(--background);
+    }
+    100% {
+        stroke-dashoffset: var(--shown);
+        fill: var(--circle);
+    }
+}
+
+@keyframes animation-inner-circle {
+    0% {
+        stroke-dashoffset: var(--hidden);
+        fill: var(--background);
+    }
+    100% {
+        stroke-dashoffset: var(--shown);
+        fill: var(--background);
+    }
+}
+
+@keyframes animation-rectangle {
+    0% {
+        stroke-dashoffset: var(--hidden);
+        fill: transparent;
+    }
+    90% {
+        stroke-dashoffset: var(--shown);
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: var(--shown);
+        fill: var(--rectangle);
+    }
+}

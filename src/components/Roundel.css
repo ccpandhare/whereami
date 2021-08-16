@@ -1,0 +1,31 @@
+.roundel {
+    --size: 350px;
+    --circle: #DC241F;
+    --rectangle: #0119A8;
+    --background: #FFFFFF;
+    width: var(--size);
+    height: var(--size);
+    position: relative;
+}
+
+.roundel-outer-circle {
+    fill: var(--background);
+    stroke-width: 1;
+    stroke: var(--circle);
+    --circumference: calc(2 * 3.14 * 40px);
+}
+
+.roundel-inner-circle {
+    fill: var(--background);
+    stroke-width: 1;
+    stroke: var(--circle);
+    --circumference: calc(2 * 3.14 * 26px);
+}
+
+.roundel-rectangle {
+    fill: transparent;
+    stroke-width: 1;
+    stroke-linecap: square;
+    stroke: var(--rectangle);
+    --perimeter: calc(2 * 100px + 2 * 15px);
+}
