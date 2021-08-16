@@ -4,6 +4,27 @@ object-assign
 @license MIT
 */
 
+/*!
+ * Geolocator.js https://github.com/onury/geolocator
+ * @license MIT. © 2019, Onur Yıldırım
+ */
+
+/*! ../lib/fetch */
+
+/*! ../lib/utils */
+
+/*! ./core/geolocator */
+
+/*! ./enums */
+
+/*! ./geo.error */
+
+/*! ./geo.helper */
+
+/*! ./geo.watcher */
+
+/*! ./utils */
+
 /** @license React v0.20.2
  * scheduler.production.min.js
  *
